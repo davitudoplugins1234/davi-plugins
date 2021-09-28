@@ -1,10 +1,11 @@
-# KannaX Plugin for getting list of sites where you can watch a particular Movie or TV-Show
+# Userge Plugin for getting list of sites where you can watch a particular Movie or TV-Show
 # Author: Sumanjay (https://github.com/cyberboysumanjay) (@cyberboysumanjay)
 # All rights reserved.
 
 import os
 
 from justwatch import JustWatch, justwatchapi
+
 from kannax import Message, kannax
 
 # https://github.com/dawoudt/JustWatchAPI/issues/47#issuecomment-691357371
@@ -62,15 +63,15 @@ def get_stream_data(query):
 
 
 @kannax.on_cmd(
-    "watch",
+    "ver",
     about={
-        "header": "Get stream link for a Movie and TV Shows",
-        "usage": "{tr}watch [query]",
-        "examples": "{tr}watch Avengers Endgame",
+        "header": "Obtenha os links de onde assistir Séries e Filmes",
+        "Como usar": "{tr}ver [query]",
+        "Exemplo": "{tr}ver Vingadores Ultimado",
     },
 )
 async def fetch_watch_sources(message: Message):
-    await message.edit("Finding Sites...")
+    await message.edit("Pesquisando, aguarde ☺️ ...")
     query = message.input_str
     streams = get_stream_data(query)
     title = streams["title"]
@@ -93,17 +94,23 @@ async def fetch_watch_sources(message: Message):
     if release_date is None:
         release_date = release_year
 
-    output_ = f"**Movie:**\n`{title}`\n**Release Date:**\n`{release_date}`"
+    output_ = f"""
+    **TÍTULO ORIGINAL:**\n| 🎬 `{title}`
+    \n**Lançamento:** `{release_date}`"""
     if imdb_score:
-        output_ = output_ + f"\n**IMDB: **{imdb_score}"
+        output_ = (
+            output_
+            + f"""
+        \n**⭐️ Avaliação no IMDB: **{imdb_score}"""
+        )
     if tmdb_score:
-        output_ = output_ + f"\n**TMDB: **{tmdb_score}"
+        output_ = output_ + f"\n**⭐️ Avaliação no TMDB: **{tmdb_score}"
 
-    output_ = output_ + "\n\n**Available on:**\n"
+    output_ = output_ + "\n\n**Disponível em:**\n"
     for provider, link in stream_providers.items():
         if "sonyliv" in link:
             link = link.replace(" ", "%20")
-        output_ += f"[{pretty(provider)}]({link})\n"
+        output_ += f"▫️ [{pretty(provider)}]({link})\n"
 
     await message.client.send_photo(
         chat_id=message.chat.id,
