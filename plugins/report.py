@@ -31,8 +31,8 @@ async def reportar(message: Message):
         )
         return
     await message.edit("`Verificando o usuário...`")
-    user_ = await userge.get_users(reply_.from_user.id)
-    me_ = await userge.get_me()
+    user_ = await kannax.get_users(reply_.from_user.id)
+    me_ = await kannax.get_me()
     if user_.id in (Config.SUDO_USERS or Config.OWNER_ID) or user_.id == me_.id:
         await message.edit(
             f"Não posso reportar o usuário <b>{user_.mention}</b>, pois está configurado em seu SUDO...",
