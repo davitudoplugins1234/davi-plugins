@@ -1,5 +1,3 @@
-""" Plugin para Baixar APK da MIUI System / @applled """
-
 from pyrogram.errors import BadRequest
 
 from kannax import Message, kannax
