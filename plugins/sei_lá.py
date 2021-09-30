@@ -5,7 +5,7 @@ from pyrogram.errors import BadRequest
 from kannax import Message, kannax
 from kannax.utils import get_file_id
 
-@kannax.on_cmd("se", about={"header": "sei lá"})
+@kannax.on_cmd("se", about={"header": "sei lá"}, trigger="", allow_via_bot=False)
 async def se_(message: Message):
     out_str = f"sei lá"
     await message.edit(out_str)
