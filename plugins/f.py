@@ -9,7 +9,7 @@ from cowpy import cow
 
 from kannax import Message, kannax
 
-@register(outgoing=True, pattern=r"^\.f (.*)")
+@kannax.on_cmd(outgoing=True, pattern=r"^\.f (.*)")
 async def payf(event):
     paytext = event.pattern_match.group(1)
     pay = "{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}".format(
