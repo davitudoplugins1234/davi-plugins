@@ -1,1 +1,1 @@
-# KannaX Joao-plugins
+# KannaX joão-plugins
