@@ -41,4 +41,4 @@ async def cut_(message: Message):
         return
     user_ = await kannax.get_users(reply_.from_user.id)
     msg_ = f" 🍑 I am {user_.mention}  {random.choice(range(0,100))}% cute!"
-    await message.edit(msg_
+    await message.edit(msg_)
