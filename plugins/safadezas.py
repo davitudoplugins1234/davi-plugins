@@ -13,7 +13,7 @@ from kannax import Message, kannax
 async def hor_(message: Message):
     reply_ = message.reply_to_message
     if not reply_:
-        iam = f"🔥 I am {random.choice(range(0,100))}% horny!"
+        hor = f"🔥 I am {random.choice(range(0,100))}% horny!"
         await message.edit(hor)
         return
     user_ = await kannax.get_users(reply_.from_user.id)
@@ -25,7 +25,7 @@ async def hor_(message: Message):
 async def cl_(message: Message):
     reply_ = message.reply_to_message
     if not reply_:
-        iam = f"🍆 My clock size is {random.choice(range(0,100))}cm!"
+        cl = f"🍆 My clock size is {random.choice(range(0,100))}cm!"
         await message.edit(cl)
         return
     user_ = await kannax.get_users(reply_.from_user.id)
@@ -36,7 +36,7 @@ async def cl_(message: Message):
 async def cut_(message: Message):
     reply_ = message.reply_to_message
     if not reply_:
-        iam = f"🍑 I am {random.choice(range(0,100))}% cute!"
+        cut = f"🍑 I am {random.choice(range(0,100))}% cute!"
         await message.edit(cut)
         return
     user_ = await kannax.get_users(reply_.from_user.id)
