@@ -32,4 +32,4 @@ from kannax import Message, kannax
         paytext * 2,
         paytext * 2,
     )
-    await event.edit(pay)
+    await message.edit(pay)
