@@ -9,36 +9,36 @@ from cowpy import cow
 
 from kannax import Message, kannax
 
-@kannax.on_cmd("hor", about={"header": "i am  horny!?"})
+@kannax.on_cmd("hor", about={"header": "Estou com tesão!?"})
 async def hor_(message: Message):
     reply_ = message.reply_to_message
     if not reply_:
-        hor = f"🔥 I am {random.choice(range(0,100))}% horny!"
+        hor = f"🔥 Estou com  {random.choice(range(0,100))}% tesão!"
         await message.edit(hor)
         return
     user_ = await kannax.get_users(reply_.from_user.id)
-    msg_ = f" 🔥{user_.mention} é {random.choice(range(0,100))}% horny!"
+    msg_ = f" 🔥{user_.mention} tá com {random.choice(range(0,100))}% tesão!"
     await message.edit(msg_)
 
 
-@kannax.on_cmd("clock", about={"header": "My clock size is!?"})
+@kannax.on_cmd("clock", about={"header": " Tamanho do meu pau é!?"})
 async def cl_(message: Message):
     reply_ = message.reply_to_message
     if not reply_:
-        cl = f"🍆 My clock size is {random.choice(range(0,100))}cm!"
+        cl = f"🍆 O tamanho do meu pau é {random.choice(range(0,100))}cm!"
         await message.edit(cl)
         return
     user_ = await kannax.get_users(reply_.from_user.id)
-    msg_ = f" 🍆{user_.mention} My clock size is {random.choice(range(0,100))}cm!"
+    msg_ = f" 🍆{user_.mention} o tamanho do pau é {random.choice(range(0,100))}cm!"
     await message.edit(msg_)
 
-@kannax.on_cmd("cute", about={"header": "i am  cute!"})
+@kannax.on_cmd("cute", about={"header": "Quanto fofo eu sou?"})
 async def cut_(message: Message):
     reply_ = message.reply_to_message
     if not reply_:
-        cut = f"🍑 I am {random.choice(range(0,100))}% cute!"
+        cut = f"🍑 Eu sou {random.choice(range(0,100))}% fofo!"
         await message.edit(cut)
         return
     user_ = await kannax.get_users(reply_.from_user.id)
-    msg_ = f" 🍑 I am {user_.mention}  {random.choice(range(0,100))}% cute!"
+    msg_ = f" 🍑 O {user_.mention} é {random.choice(range(0,100))}% fofo!"
     await message.edit(msg_)
