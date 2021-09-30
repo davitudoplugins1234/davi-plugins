@@ -1,3 +1,5 @@
+# by joaoppierri
+
 from pyrogram.errors import BadRequest
 
 from kannax import Message, kannax
