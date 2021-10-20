@@ -21,12 +21,12 @@ async def hor_(message: Message):
     await message.edit(msg_)
 
 
-@kannax.on_cmd("clock", about={"header": " Tamanho do meu pau é!?"})
-async def cl_(message: Message):
+@kannax.on_cmd("pau", about={"header": " Tamanho do meu pau é!?"})
+async def pau_(message: Message):
     reply_ = message.reply_to_message
     if not reply_:
-        cl = f"🍆 O tamanho do meu pau é {random.choice(range(0,100))}cm!"
-        await message.edit(cl)
+        pau = f"🍆 O tamanho do meu pau é {random.choice(range(0,100))}cm!"
+        await message.edit(pau)
         return
     user_ = await kannax.get_users(reply_.from_user.id)
     msg_ = f" 🍆{user_.mention} o tamanho do pau é {random.choice(range(0,100))}cm!"
