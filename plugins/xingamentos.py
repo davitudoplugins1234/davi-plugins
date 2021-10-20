@@ -1,11 +1,6 @@
+#by joaoppierri"
+
 from kannax import Message, kannax
-      
-
-@kannax.on_cmd("(Crl|crl)$", about={"header": "caralho"}, trigger="", allow_via_bot=False)
-async def crl_(message: Message):
-    """crl"""
-    await message.edit("caralho")
-
 
 @kannax.on_cmd("Vsf|vsf", about={"header": "vai se foder"})
 async def vsf_(message: Message):
