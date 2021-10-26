@@ -1,7 +1,5 @@
 """ Ronaldadetes e Madrizetes"""
 
-# All rights reserved.
-
 import asyncio
 
 from kannax import Message, kannax
@@ -34,7 +32,6 @@ async def cr7_(message: Message):
 ⠀⠀⠀⠀⠀⠀⠉⠛⠻⠿⠿⠿⠿⠿⠿⠟⠛⠉⠁⠀
     """
     await message.edit(out_str)
-
 
 
 @kannax.on_cmd("real", about={"header": "Real Madrid"})
