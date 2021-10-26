@@ -6,7 +6,7 @@ from kannax import Message, kannax
 
 @kannax.on_cmd("cr7", about={"header": "Cristiano Ronaldo"})
 async def cr7_(message: Message):
-    out_str = f"""
+  out_str = f"""
  ⠀⠀⠀⠀⢀⣠⠤⡶⣲⢺⣴⣶⢭⣉⢲⣀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⢀⡾⢵⣶⣿⣿⣿⣾⣷⣳⣿⣷⣵⣈⠷⢤⡀⠀⠀⠀⠀⠀
 ⠀⠀⠘⢾⣿⡿⠿⠿⠿⠿⠿⠿⢿⡿⣿⣿⣿⣾⣾⣦⠀⠀⠀⠀
@@ -30,8 +30,9 @@ async def cr7_(message: Message):
 ⠀⠈⢮⡻⣿⣷⣀⠀⢀⢸⣿⣿⣟⣿⣿⠿⠒⣀⣤⣿⣿⠏⠀⠀
 ⠀⠀⠀⠙⠺⣿⣿⣿⣾⣾⣿⣭⣭⣭⣷⣾⣿⣿⣿⠟⠁⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠉⠛⠻⠿⠿⠿⠿⠿⠿⠟⠛⠉⠁⠀
-  """
+    """
   await message.edit(out_str)
+
 
 @kannax.on_cmd("real", about={"header": "Real Madrid"})
 async def real_(message: Message):
