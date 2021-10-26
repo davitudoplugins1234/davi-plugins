@@ -36,7 +36,7 @@ async def cr7_(message: Message):
 
 @kannax.on_cmd("sii", about={"header": "Sííííí"})
 async def sii_(message: Message):
-    out_str =  f"""
+    out_str =   f"""
     Siiiiiiiiií
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -54,4 +54,4 @@ async def sii_(message: Message):
 ⠀⠀⠀⢀⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣆⠀⠀⠀
 ⠀⠀⠠⢾⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣷⡤
     """
-  await message.edit(out_str)
+    await message.edit(out_str)
