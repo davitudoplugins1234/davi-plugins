@@ -30,13 +30,12 @@ async def cr7_(message: Message):
 ⠀⠈⢮⡻⣿⣷⣀⠀⢀⢸⣿⣿⣟⣿⣿⠿⠒⣀⣤⣿⣿⠏⠀⠀
 ⠀⠀⠀⠙⠺⣿⣿⣿⣾⣾⣿⣭⣭⣭⣷⣾⣿⣿⣿⠟⠁⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠉⠛⠻⠿⠿⠿⠿⠿⠿⠟⠛⠉⠁⠀
-    """
-    await message.edit(out_str)
-
+  """
+  await message.edit(out_str)
 
 @kannax.on_cmd("real", about={"header": "Real Madrid"})
 async def real_(message: Message):
-    out_str = f"""
+  out_str = f"""
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢀⡚⢓⡀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⣀⣀⠴⡬⠈⢥⡨⠁⢥⠦⣀⣀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠠⠃⠆⠐⣭⣭⣴⣦⣭⣴⣦⣭⠒⠰⠸⠄⠀⠀⠀⠀⠀
@@ -57,4 +56,4 @@ async def real_(message: Message):
 ⠀⠀⠀⠀⠙⠢⣌⡓⠦⢄⣀⣀⣀⣀⣀⣀⡠⠽⢚⣡⠔⠋⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠈⠉⠲⠤⣬⣭⣭⣭⣭⣥⠤⠖⠉⠁
     """
-    await message.edit(out_str)⠀⠀⠀⠀⠀
+  await message.edit(out_str)⠀⠀⠀
