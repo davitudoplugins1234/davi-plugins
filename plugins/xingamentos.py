@@ -2,7 +2,7 @@
 
 from kannax import Message, kannax
 
-@kannax.on_cmd("vtnc|vtnc", about={"header": "vai tomar" no ci})
+@kannax.on_cmd("vtnc|vtnc", about={"header": "vai tomar no cu"})
 async def vtnc_(message: Message):
     reply_ = message.reply_to_message
     if not reply_:
