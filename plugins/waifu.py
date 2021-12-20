@@ -4,7 +4,7 @@ import asyncio
 
 from kannax import Message, kannax
 
-@kannax.on_cmd("cr7", about={"header": "Cristiano Ronaldo"})
+@kannax.on_cmd("waifu", about={"header": "Waifu Gostosa"})
 async def cr7_(message: Message):
   out_str = f"""
 ⠄⠄⢰⣧⣼⣯⠄⣸⣠⣶⣶⣦⣾⠄⠄⠄⠄⡀⠄⢀⣿⣿⠄⠄⠄⢸⡇⠄⠄ 
