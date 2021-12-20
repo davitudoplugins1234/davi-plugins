@@ -3,7 +3,7 @@ import asyncio
 from kannax import Message, kannax
 
 
-@kannax.on_cmd("melhor", about={"header": "Melhor"})
+@kannax.on_cmd
 async def sii_(message: Message):
 texto = aaaa
 texto2 = saasd
