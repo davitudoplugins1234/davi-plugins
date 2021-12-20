@@ -1,1 +1,1 @@
-# KannaX joão-plugins
+# KannaX Giovany-Plugins
