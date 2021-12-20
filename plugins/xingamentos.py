@@ -2,12 +2,12 @@
 
 from kannax import Message, kannax
 
-@kannax.on_cmd("vtnc|vtnc", about={"header": "vai se foder"})
+@kannax.on_cmd("vtnc|vtnc", about={"header": "vai tomar" no ci})
 async def vtnc_(message: Message):
     reply_ = message.reply_to_message
     if not reply_:
         vtnc = f"vai tomar no cu"
-        await message.edit(vsf)
+        await message.edit(vtnc)
         return
     user_ = await kannax.get_users(reply_.from_user.id)
     msg_ = f" {user_.mention} vai tomar no seu cu"
