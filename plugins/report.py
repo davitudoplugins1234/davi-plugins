@@ -1,6 +1,6 @@
-texto = test
-texto2 = test1
+texto = aaaa
+texto2 = saasd
 
-await message.edit(texto)
+await message.edit(aaaa)
 asyncio.sleep(2)
-await message.edit(texto2)
+await message.edit(saasd)
