@@ -2,7 +2,7 @@
 
 from kannax import Message, kannax
 
-@kannax.on_cmd("vtnc|vtnc", about={"header": "vai tomar no cu"})
+@kannax.on_cmd("Vtnc|vtnc", about={"header": "vai tomar no cu"})
 async def vtnc_(message: Message):
     reply_ = message.reply_to_message
     if not reply_:
@@ -30,7 +30,7 @@ async def prr_(message: Message):
     reply_ = message.reply_to_message
     if not reply_:
         prr = f"porra"
-        await message.edit(crl)
+        await message.edit(prr)
         return
     user_ = await kannax.get_users(reply_.from_user.id)
     msg_ = f" {user_.mention} porra"
