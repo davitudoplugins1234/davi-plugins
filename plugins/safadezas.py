@@ -25,7 +25,7 @@ async def hor_(message: Message):
 async def pau_(message: Message):
     reply_ = message.reply_to_message
     if not reply_:
-        pau = f"🍆 O tamanho do meu pau é {random.choice(range(700,10000))}cm!"
+        pau = f"🍆 O tamanho do meu pau é {random.choice(range(0,500))}cm!"
         await message.edit(pau)
         return
     user_ = await kannax.get_users(reply_.from_user.id)
