@@ -25,13 +25,13 @@ async def pqp_(message: Message):
     msg_ = f" {user_.mention} vai pra puta que pariu"
     await message.edit(msg_)
 
-@kannax.on_cmd("Crl|crl", about={"header": "caralho"})
-async def crl_(message: Message):
+@kannax.on_cmd("Prr|prr", about={"header": "porra"})
+async def prr_(message: Message):
     reply_ = message.reply_to_message
     if not reply_:
-        crl = f"caralho"
+        prr = f"porra"
         await message.edit(crl)
         return
     user_ = await kannax.get_users(reply_.from_user.id)
-    msg_ = f" {user_.mention} vai pra casa do caralho"
+    msg_ = f" {user_.mention} porra"
     await message.edit(msg_)
