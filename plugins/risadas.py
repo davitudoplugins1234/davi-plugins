@@ -7,7 +7,7 @@ from kannax.utils import get_file_id
 
 @kannax.on_cmd("k", about={"header": "risada mais curta"}, allow_via_bot=False)
 async def k_(message: Message):
-    out_str = f"KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK"
+    out_str = f"KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK"
     await message.edit(out_str)
 
 
