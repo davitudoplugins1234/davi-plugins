@@ -20,3 +20,8 @@ pyfiglet
 pylast
 pytgcalls
 ffmpeg-python
+asyncio 
+os 
+time 
+requests 
+ujson
