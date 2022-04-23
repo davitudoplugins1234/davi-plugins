@@ -14,7 +14,7 @@ async def k_(message: Message):
     await message.edit(K)
 
 
-@kannax.on_cmd("KKK|kkk)$", about={"header": "risada  longa"}, allow_via_bot=False)
+@kannax.on_cmd("kkk", about={"header": "risada  longa"}, allow_via_bot=False)
 async def kkk_(message: Message):
     out_str = f"KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK"
     await message.edit(out_str)
