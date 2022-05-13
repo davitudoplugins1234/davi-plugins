@@ -1,7 +1,7 @@
 import dicioinformal
 from kannax import Message, kannax
 
-@kannax.on_message(filters.command("dicio"))
+@kannax.on_message("dicio", about={"header": "dicionário"})
 async def dicio(message: Message):
     txt = message.input_str
     a = dicioinformal.definicao(txt)["results"]
