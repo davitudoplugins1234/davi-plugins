@@ -1,4 +1,4 @@
-""" this thing will be used as plugin doc string """
+""" plugin de risada """
 
 # here you can do initializing things or keep shared data which will be used by other plugins
 
