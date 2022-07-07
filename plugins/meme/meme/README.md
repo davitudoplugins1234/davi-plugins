@@ -1,3 +1,3 @@
-# Plugins meme
+# Plugins misc
 
 laugh plugin
