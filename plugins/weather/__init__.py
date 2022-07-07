@@ -1,1 +1,0 @@
-"""Plugin De Clima"""
