@@ -1,4 +1,6 @@
-# by joaoppierri
+# by DaviTudo
+
+from pyrogram.errors import YouBlockedUser
 
 from userge import Message, userge
 
