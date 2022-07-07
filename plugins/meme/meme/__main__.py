@@ -31,7 +31,7 @@ async def clima_ln(message: Message):
         try:
             await conv.send_message(f"!clima {city_}")
         except YouBlockedUser:
-            await message.reply("Por Favor desbloqueie a @WhiterKangBOT")
+            await message.edit("Por Favor desbloqueie a @WhiterKangBOT")
             return
         response = await conv.get_response(mark_read=True)
         await message.edit(response.text)
