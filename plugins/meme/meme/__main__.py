@@ -25,7 +25,7 @@ async def kkk_(message: Message):
 async def clima_ln(message: Message):
     city_ = message.input_str
     if not city_:
-        return await message.reply("<b>Uso:</b> <code>/clima localização ou cidade</code> <i>- Obtém informações sobre o clima na localização ou cidade.</i>")
+        return await message.edit("<b>Uso:</b> <code>/clima localização ou cidade</code> <i>- Obtém informações sobre o clima na localização ou cidade.</i>")
     bot_ = "@WhiterKangBOT"
     async with userge.conversation(bot_, timeout=1000) as conv:
         try:
