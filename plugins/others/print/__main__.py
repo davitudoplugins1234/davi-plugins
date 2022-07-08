@@ -7,12 +7,12 @@ http = httpx.AsyncClient()
 
 
 @userge.on_cmd(
-     "print",
-      about={
-          "header": "print command",
-          "description": "take a print through a link",
-          "usage": "{tr}print [link]",
-     },
+    "print",
+    about={
+        "header": "print command",
+        "description": "take a print through a link",
+        "usage": "{tr}print [link]",
+    },
 )
 async def print_(message: Message):
     the_url = message.input_str
