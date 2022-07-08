@@ -64,7 +64,7 @@ async def cssworker_url(target_url: str):
         "render_when_ready": False,
         "viewport_width": 1280,
         "viewport_height": 720,
-        "device_scale": 1
+        "device_scale": 1,
    }
    try:
        resp = await http.post(url, headers=my_headers, json=data)
