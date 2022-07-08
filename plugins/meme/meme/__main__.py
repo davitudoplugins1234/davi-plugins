@@ -13,3 +13,13 @@ async def kkk_(message: Message):
     out_str = f"KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK"
     await message.edit(out_str)
 
+@userge.on_cmd("lol", about={"header": "lol command"}, allow_via_bot=False)
+async def lol(message: Message):
+    out_str = f"""
+┏━┓┈┈╭━━━━╮┏━┓┈┈
+┃╱┃┈┈┃╱╭╮╱┃┃╱┃┈┈
+┃╱┗━┓┃╱┃┃╱┃┃╱┗━┓
+┃╱╱╱┃┃╱╰╯╱┃┃╱╱╱┃
+┗━━━┛╰━━━━╯┗━━━┛
+    """
+    await message.edit(out_str)
