@@ -31,13 +31,13 @@ async def print_(message: Message):
         the_url = the_url[1]
     
     if wrong:
-        return await message.reply("Please give me a link so I can print")
+        return await message.edit("Please give me a link so I can print")
 
     try:
         await message.edit("<i>Taking screenshot...</i>")
         res_json = await cssworker_url(target_url=the_url)
     except BaseException as e:
-        await message.err(f"Failed due to {e}")
+        await message.edit(f"Failed due to {e}")
      
     if res_json:
         image_url = res_json["url"]
