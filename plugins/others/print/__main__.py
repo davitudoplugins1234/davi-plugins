@@ -56,7 +56,7 @@ async def print_(message: Message):
 async def cssworker_url(target_url: str):
     url = "https://htmlcsstoimage.com/demo_run"
     my_headers = {
-       "User-Agent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv: 95.0) Gecko/201000101 Firefox/95.0",
+       "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv: 95.0) Gecko/201000101 Firefox/95.0",
     }
      
     data = {
