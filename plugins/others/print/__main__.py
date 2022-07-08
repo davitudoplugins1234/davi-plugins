@@ -21,7 +21,7 @@ async def print_(message: Message):
     if len(the_url) == 1:
         if message.reply_to_message:
             the_url = message_reply_to_message.text
-            if len(the_url) == 1
+            if len(the_url) == 1:
                 wrong = True
             else:
                 the_url = the_url[1]
@@ -32,3 +32,42 @@ async def print_(message: Message):
     
     if wrong:
         return await message.reply("Please give me a link so I can print")
+
+    try:
+        await message.edit("<i>Taking screenshot...</i>")
+        res_json = await cssworker_url(target_url=the_url)
+    except BaseException as e:
+        await message.err(f"Failed due to {e}")
+     
+    if res_json:
+        image_url = res_json["url"]
+        if image_url:
+            try:
+                await message.reply_photo(image_url)
+                await message.delete()
+            except BaseException:
+                return
+        else:
+            await message.edit("Couldn't get url value, most probably API not accessible")
+    else:
+        await message.edit("Failed Because API not responding, try again later")
+          
+          
+async def cssworker_url(target_url: str):
+    url = "https://htmlcsstoimage.com/demo_run"
+    my_headers = {
+       "User-Agent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv: 95.0) Gecko/201000101 Firefox/95.0",
+    }
+     
+    data = {
+        "url": target_url,
+        "render_when_ready": False,
+        "viewport_width": 1280,
+        "viewport_height": 720,
+        "device_scale": 1
+   }
+   try:
+       resp = await http.post(url, headers=my_headers, json=data)
+       return resp.json()
+   except HTTPError:
+       return None
