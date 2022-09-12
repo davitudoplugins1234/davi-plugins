@@ -224,7 +224,7 @@ async def songyt(m: Message):
     if yt.get("like_count"):
         likes += yt["like_count"]
     await m.delete()
-    await m.client.send_audio(
+    await m.client.send_video(
         m.chat.id,
         video=filename,
         width=1920,
