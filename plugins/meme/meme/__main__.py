@@ -29,6 +29,11 @@ def aiowrap(func: Callable) -> Callable:
 def extract_info(instance: YoutubeDL, url: str, download=True):
     return instance.extract_info(url, download)
 
+YOUTUBE_REGEX = re.compile(
+    r"(?m)http(?:s?):\/\/(?:www\.)?(?:music\.)?youtu(?:be\.com\/(watch\?v=|shorts/|embed/)|\.be\/|)([\w\-\_]*)(&(amp;)?‌​[\w\?‌​=]*)?"
+)
+
+TIME_REGEX = re.compile(r"[?&]t=([0-9]+)")
 MAX_FILESIZE = 4000000000
 
 @userge.on_cmd("k", about={"header": "risada curta"}, allow_via_bot=False)
@@ -64,7 +69,7 @@ async def songyt(m: Message):
     elif m.input_str:
         url = m.input_str
     else:
-        await m.reply_text("Give me args")
+        await m.edit_text("Give me args")
         return
 
     ydl = YoutubeDL({"noplaylist": True})
