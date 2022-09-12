@@ -146,12 +146,13 @@ async def songyt(m: Message):
         thumb=thumb,
         reply_to_message_id=int(m.id),
     )
+    shutil.rmtree(tempdir, ignore_errors=True)
     
     
 @userge.on_cmd(
     "ytvideo", 
     about={'header': "Advanced YT_DLP video",
-        'usage': "{tr}ytsong URL or Query"}
+        'usage': "{tr}ytvideo URL or Query"}
 )
 async def videoyt(m: Message):
     if m.reply_to_message and m.reply_to_message.text:
@@ -234,3 +235,4 @@ async def videoyt(m: Message):
         thumb=thumb,
         reply_to_message_id=int(m.id),
     )
+    shutil.rmtree(tempdir, ignore_errors=True)
