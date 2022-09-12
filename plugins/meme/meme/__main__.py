@@ -150,7 +150,7 @@ async def songyt(m: Message):
     
 @userge.on_cmd(
     "ytvideo", 
-    about={'header': "Advanced YT_DLP song",
+    about={'header': "Advanced YT_DLP video",
         'usage': "{tr}ytsong URL or Query"}
 )
 async def songyt(m: Message):
