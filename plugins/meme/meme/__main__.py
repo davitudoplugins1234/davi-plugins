@@ -153,7 +153,7 @@ async def songyt(m: Message):
     about={'header': "Advanced YT_DLP video",
         'usage': "{tr}ytsong URL or Query"}
 )
-async def songyt(m: Message):
+async def videoyt(m: Message):
     if m.reply_to_message and m.reply_to_message.text:
         url = m.reply_to_message.text
     elif m.input_str:
@@ -202,10 +202,10 @@ async def songyt(m: Message):
 
      ydl = YoutubeDL(
          {
-            "outtmpl": f"{path}/%(title)s-%(id)s.%(ext)s",
-            "format": f"{vformat}+140",
-            "max_filesize": MAX_FILESIZE,
-            "noplaylist": True,
+             "outtmpl": f"{path}/%(title)s-%(id)s.%(ext)s",
+             "format": f"{vformat}+140",
+             "max_filesize": MAX_FILESIZE,
+             "noplaylist": True,
          }
     )
     try:
