@@ -101,7 +101,9 @@ async def songyt(m: Message):
     else:
         performer = yt.get("creator") or yt.get("uploader")
         title = yt["title"]
-    await m.edit("Baixando...")
+    if afsize > MAX_FILESIZE:
+        return await m.edit("Sorry, Telegram doesn't allow me to upload videos larger than 4GB")
+    await m.edit("Downloading...")
     with tempfile.TemporaryDirectory() as tempdir:
         path = os.path.join(tempdir, "ytdlp")
     id = yt["id"]
@@ -120,7 +122,7 @@ async def songyt(m: Message):
     except BaseException as e:
         await m.edit("<b>Error:</b> <i>{}</i>".format(e))
         return
-    await m.edit("Enviando...")
+    await m.edit("Sending...")
     filename = ydl.prepare_filename(yt)
     thumb = io.BytesIO((await http.get(yt["thumbnail"])).content)
     thumb.name = "thumbnail.png"
@@ -135,6 +137,7 @@ async def songyt(m: Message):
         m.chat.id,
         audio=filename,
         title=title,
+        caption="<b>{}[{}]</b>\n\n<b>• Duration</b>: <i>{}</i>\n<b>• Channel</b>: <i>{}</i>\n<b>• Views</b>: <i>{}</i>\n<b>• Likes</b>: <i>{}</i>".format(title, url, datetime.timedelta(seconds=yt["duration"]), channel or None, likes or 0)
         performer=performer,
         duration=yt["duration"],
         thumb=thumb,
