@@ -33,6 +33,8 @@ YOUTUBE_REGEX = re.compile(
     r"(?m)http(?:s?):\/\/(?:www\.)?(?:music\.)?youtu(?:be\.com\/(watch\?v=|shorts/|embed/)|\.be\/|)([\w\-\_]*)(&(amp;)?‌​[\w\?‌​=]*)?"
 )
 
+http = httpx.AsyncClient()
+
 TIME_REGEX = re.compile(r"[?&]t=([0-9]+)")
 MAX_FILESIZE = 4000000000
 
