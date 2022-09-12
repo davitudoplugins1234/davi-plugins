@@ -106,6 +106,9 @@ async def songyt(m: Message):
     await m.edit("Downloading...")
     with tempfile.TemporaryDirectory() as tempdir:
         path = os.path.join(tempdir, "ytdlp")
+        
+    ttemp = f"⏰ {datetime.timedelta(seconds=int(temp))} | " if int(temp) else ""
+    
     id = yt["id"]
     url = f"https://www.youtube.com/watch?v={id}"
 
@@ -137,7 +140,7 @@ async def songyt(m: Message):
         m.chat.id,
         audio=filename,
         title=title,
-        caption="<b>[{}]({})</b>\n\n<b>• Duration</b>: <i>{}</i>\n<b>• Channel</b>: <i>{}</i>\n<b>• Views</b>: <i>{}</i>\n<b>• Likes</b>: <i>{}</i>".format(title, url, datetime.timedelta(seconds=yt["duration"]), channel or None, likes or 0),
+        caption="<b>[{}]({})</b>\n\n<b>• Duration</b>: <i>{}</i>\n<b>• Channel</b>: <i>{}</i>\n<b>• Views</b>: <i>{}</i>\n<b>• Likes</b>: <i>{}</i>".format(ttemp + title, url, datetime.timedelta(seconds=yt["duration"]), channel or None, likes or 0),
         performer=performer,
         duration=yt["duration"],
         thumb=thumb,
