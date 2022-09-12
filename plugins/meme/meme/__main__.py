@@ -228,7 +228,7 @@ async def songyt(m: Message):
         m.chat.id,
         video=filename,
         width=1920,
-        heigth=1080,
+        height=1080,
         caption="<b>[{}]({})</b>\n\n<b>• Duration</b>: <i>{}</i>\n<b>• Channel</b>: <i>{}</i>\n<b>• Views</b>: <i>{}</i>\n<b>• Likes</b>: <i>{}</i>".format(ttemp + title, url, datetime.timedelta(seconds=yt["duration"]), yt["channel"] or None, views, likes or 0),
         duration=yt["duration"],
         thumb=thumb,
