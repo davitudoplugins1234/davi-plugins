@@ -16,7 +16,7 @@ http = httpx.AsyncClient()
     },
 )
 async def print_(message: Message):
-    the_url = message.input_str.split()
+    the_url = f"{message.input_str}"
     wrong = False
     
     if len(the_url) == 1:
