@@ -10,7 +10,7 @@ async def gtofertas_(message: Message):
     message_count = 0
     while True:
         try:
-            i = await userge.forward_messages(-1001661060014, -1001197236241, message_reply)
+            i = await userge.forward_messages(-1001115033767, -1001197236241, message_reply)
             message_reply += 1
             if i:
                  message_count += 1
