@@ -5,13 +5,12 @@ from userge import userge, Message
 
 @userge.on_cmd("gtofertas", about={"header": "Enviar ofertas"}, allow_via_bot=False)
 async def gtofertas_(message: Message):
-    id = message.input_str[1]
-    time = message.input_str[2]
+    id, time = message.filtered_input_str.split(maxsplit=1)
     message_reply = int(id)
     message_count = 0
     while True:
         try:
-            i = await userge.forward_messages(-1001115033767, -1001741618065, message_reply)
+            i = await userge.forward_messages(-1001661060014, -1001197236241, message_reply)
             message_reply += 1
             if i:
                  message_count += 1
